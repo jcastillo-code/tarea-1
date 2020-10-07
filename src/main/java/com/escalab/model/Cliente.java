@@ -1,5 +1,6 @@
 package com.escalab.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,10 +15,13 @@ public class Cliente {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idCliente;
 	
+	@Column(name = "nombre", nullable = false, length = 50)
 	private String nombre;
 	
+	@Column(name = "direccion", nullable = false, length = 70)
 	private String direccion;
 	
-	private String telefono;
+	@Column(name = "telefono", nullable = false, length = 10)
+	private Integer telefono;
 
 }
